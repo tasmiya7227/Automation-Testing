@@ -1,7 +1,7 @@
 package oops;
 
 //Private Access modifiers
-public class AccessModifierPrivate {
+public class PrivateAccessModifier {
 	private String name;
 
     // getter method
@@ -17,7 +17,7 @@ public class AccessModifierPrivate {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		AccessModifierPrivate d = new AccessModifierPrivate();
+		PrivateAccessModifier d = new PrivateAccessModifier();
 		d.name = "Automation Testing";
 		System.out.println(d.getName());
 	}
