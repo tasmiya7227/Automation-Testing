@@ -3,8 +3,10 @@ package cucumber;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.asserts.SoftAssert;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginHRM {
@@ -27,6 +29,26 @@ public class LoginHRM {
 			driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
 			  
 		
+		}
+		@Then("home page is displayed")
+		public void home_page_is_displayed() {
+		String actualResult;
+		String expectedResult;
+		expectedResult= "PIM";
+		actualResult= driver.findElement(By.xpath("//img[@alt=\"client brand banner\"]")).getText();
+		SoftAssert soft = new SoftAssert();
+		soft.assertEquals(actualResult, expectedResult);
+		
+		}
+		@Then("user able to apply for the leave")
+		public void leave() {
+			driver.findElement(By.linkText("Leave")).click();
+			driver.findElement(By.linkText("Apply")).click();
+			driver.findElement(By.xpath("//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"]")).click();
+			driver.findElement(By.xpath("//*[contains(text(),\"CAN\")]")).click();
+			driver.findElement(By.xpath("//div[@class=\"oxd-date-input\"]/input")).sendKeys("2022-09-21");
+			driver.findElement(By.xpath("//div[@class=\"oxd-form-row\"][2]//div[@class=\"oxd-grid-item oxd-grid-item--gutters\"][2]//input")).click();
+			driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
 		}
 	}
 
