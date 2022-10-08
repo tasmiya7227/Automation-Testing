@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngFramework.LeaveHRM">
+      <class name="testngFramework.EmployeeSearchHRM">
         <methods>
-          <include name="leave"/>
           <include name="login"/>
+          <include name="employeeSearch"/>
+          <include name="employeeSearch"/>
         </methods>
-      </class> <!-- testngFramework.LeaveHRM -->
+      </class> <!-- testngFramework.EmployeeSearchHRM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
