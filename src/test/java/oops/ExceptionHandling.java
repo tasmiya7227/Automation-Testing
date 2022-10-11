@@ -4,6 +4,8 @@ public class ExceptionHandling {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		//exception handling using try cath finally
 		try 
 		{
 		    int[] myNumbers = {1, 2, 3};

@@ -1,4 +1,5 @@
 package oops;
+
 interface  inter1
 {
 	void chocolate();

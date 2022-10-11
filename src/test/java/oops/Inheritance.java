@@ -1,5 +1,6 @@
 package oops;
 
+//Electonics class
 	class Electronics
 	{  
 		void deviceType()
@@ -7,13 +8,16 @@ package oops;
 			System.out.println("Device Type: Electronics");
 		}  
 	}  
+//grinder inherits electronics class
 	class Grinder extends Electronics
 	{  
 		void category()
 		{
 			System.out.println("Category: Grinder");
 		}  
-	}  
+	} 
+	
+//Wetgrinder class inherits grinder class
 	class WetGrinder extends Grinder
 	{  
 		void grinding_tech()

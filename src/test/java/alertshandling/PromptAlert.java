@@ -10,7 +10,7 @@ public class PromptAlert {
 		// TODO Auto-generated method stub
 		
 
-				System.setProperty("webdriver.chrome.driver", "C:\\Shivaram\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Tasmiya\\chromedriver.exe");
 			    WebDriver driver = new ChromeDriver();
 		        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		        
@@ -20,7 +20,7 @@ public class PromptAlert {
 		        String name = alerttprompt.getText();
 		        System.out.println("Alert text is: " + name);
 		        Thread.sleep(2000);
-		        alerttprompt.sendKeys("Abhishek Bhat");
+		        alerttprompt.sendKeys("Tasmiya Mansoor");
 		        Thread.sleep(1000);
 		        alerttprompt.accept();
 				   

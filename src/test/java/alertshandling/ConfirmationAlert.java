@@ -11,7 +11,7 @@ public class ConfirmationAlert {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Shivaram\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Tasmiya\\chromedriver.exe");
 	    WebDriver driver = new ChromeDriver();
 	    
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

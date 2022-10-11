@@ -1,6 +1,4 @@
 package Selenium;
-
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -66,8 +64,8 @@ public class Locators {
 		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
 		
 		//Signout
-		//driver.findElement(By.xpath("//span[@class=\"oxd-userdropdown-tab\"]")).click();
-		//driver.findElement(By.xpath("//li[4]/a[@class=\"oxd-userdropdown-link\"]")).click();
+		driver.findElement(By.xpath("//span[@class=\"oxd-userdropdown-tab\"]")).click();
+		driver.findElement(By.xpath("//li[4]/a[@class=\"oxd-userdropdown-link\"]")).click();
 		
 	
 	}
