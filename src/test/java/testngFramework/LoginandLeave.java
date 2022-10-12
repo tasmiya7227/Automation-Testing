@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 public class LoginandLeave {
 	private static WebDriver driver = null;
+	//
 	@Test(priority=1)
 	  public void login() throws InterruptedException {
 		  System.setProperty("webdriver.chrome.driver", "C:\\Tasmiya\\chromedriver.exe");
@@ -19,8 +20,9 @@ public class LoginandLeave {
 			driver.findElement(By.name("username")).sendKeys("Admin");
 			driver.findElement(By.name("password")).sendKeys("admin123");
 			driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+			
 	  }
-	  
+	
 	@Test(priority=2)
 	public void leave() throws InterruptedException
 	{

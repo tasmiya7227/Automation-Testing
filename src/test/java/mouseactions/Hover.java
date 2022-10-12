@@ -15,7 +15,9 @@ public class Hover {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.aptransport.org/");
 		//	d.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//creating object for action class
 		Actions mouse=new Actions(driver);
+		//to maximize the window
 		driver.manage().window().maximize();
 		mouse.moveToElement(driver.findElement(By.linkText("LICENCE"))).build().perform();
 		Thread.sleep(1000);

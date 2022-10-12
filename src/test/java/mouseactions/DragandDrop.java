@@ -16,7 +16,8 @@ public class DragandDrop {
 		   //driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		   driver.findElement(By.linkText("Draggable")).click();
 		   driver.switchTo().frame(driver.findElement(By.className("demo-frame")));
-		   //Thread.sleep(20000);
+	
+		   //creating object for action class
 		   Actions mouse=new Actions(driver);
 		   mouse.dragAndDropBy(driver.findElement(By.id("draggable")),100,100).build().perform();
 		   Thread.sleep(10000);

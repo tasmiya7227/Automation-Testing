@@ -22,7 +22,9 @@ public class Click {
                  + "/table/tbody/tr/td"
                  + "/table/tbody/tr/td"
                  + "/table/tbody/tr/td"
-                 + "/table/tbody/tr"));    
+                 + "/table/tbody/tr"));  
+	     
+	     //creating object for action class
 	     Actions builder = new Actions(driver);
 	     Action mouseOverHome = builder.moveToElement(link_Home).build();
 		 String bgColor = td_Home.getCssValue("background-color");
