@@ -14,15 +14,14 @@ public class ConfirmationAlert {
 		System.setProperty("webdriver.chrome.driver", "C:\\Tasmiya\\chromedriver.exe");
 	    WebDriver driver = new ChromeDriver();
 	    
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-
-        driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
-        Alert alerttconfirm = driver.switchTo().alert();
-        String name = alerttconfirm.getText();
-        System.out.println("Alert text is: " + name);
-        Thread.sleep(2000);
-        alerttconfirm.accept();
+	    driver.get("https://demo.automationtesting.in/Alerts.html"); //getting website
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+		driver.findElement(By.linkText("Alert with OK & Cancel")).click();
+		driver.findElement(By.xpath("//button[@onclick = 'confirmbox()']")).click();
+		Alert alert = driver.switchTo().alert(); // switch to alert
+		String alertMessage= driver.switchTo().alert().getText(); // capture alert message 
+		System.out.println(alertMessage); // Print Alert Message
+		alert.accept();//accepting alert
 	}
 
 }

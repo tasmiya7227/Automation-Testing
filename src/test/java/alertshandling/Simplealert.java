@@ -1,5 +1,7 @@
 package alertshandling;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,27 +12,17 @@ public class Simplealert {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver","C:\\Tasmiya\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-	
-        
+		
         // Alert Message handling
                     		
-        driver.get("http://demo.guru99.com/test/delete_customer.php");	
-        driver.findElement(By.name("cusid")).sendKeys("53920");					
-        driver.findElement(By.name("submit")).submit();			
-        		
-        // Switching to Alert        
-        Alert alert = driver.switchTo().alert();		
-        		
-        // Capturing alert message.    
-        String alertMessage= driver.switchTo().alert().getText();		
-        		
-        // Displaying alert message		
-        System.out.println(alertMessage);	
-        Thread.sleep(5000);
-        		
-        // Accepting alert		
-        alert.accept();
+		WebDriver driver = new ChromeDriver(); //creating object of class
+		driver.get("https://demo.automationtesting.in/Alerts.html"); //getting website
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+		driver.findElement(By.xpath("//button[@onclick = 'alertbox()']")).click();
+		Alert alert = driver.switchTo().alert(); // switch to alert
+		String alertMessage= driver.switchTo().alert().getText(); // capture alert message
+		System.out.println(alertMessage); // Print Alert Message
+		alert.accept(); //accepting alert
 	}
 
 }
